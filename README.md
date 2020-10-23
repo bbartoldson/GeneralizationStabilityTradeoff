@@ -9,15 +9,16 @@ This repository is the official implementation of [The Generalization-Stability 
 Install Anaconda, then create the following environment: 
 
 ```
-conda create -n GST python=3.7 scipy pandas=1.0.1 matplotlib=3.1.3 seaborn=0.10.0 pingouin pytorch=1.4 torchvision=0.5 cudatoolkit=10 -c pytorch
+conda create -n GST python=3.7 scipy pandas=1.0.1 matplotlib=3.1.3 seaborn=0.10.0 pytorch=1.4 torchvision=0.5 cudatoolkit=10 -c pytorch
+conda activate GST
+conda install -c conda-forge pingouin
 ```
 
 ## Run Experiments
 
-Activate your conda environment. Then, inside the GeneralizationStabilityTradeoff directory, execute the Bash script in the scripts_for_experiments directory that corresponds to the experiment you want to run. For example, to run the experiment associated with Figure 2, run the following commands:
+With the GST conda environment and from the GeneralizationStabilityTradeoff directory, execute the Bash script in the scripts_for_experiments directory that corresponds to the experiment you want to run. For example, to run the experiment associated with Figure 2, run the following command:
 
 ```
-conda activate GST
 bash scripts_for_experiments/Figure_2.sh
 ```
 
